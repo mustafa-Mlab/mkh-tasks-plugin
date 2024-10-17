@@ -1,0 +1,23 @@
+{
+    "name": "mkh-task-plugin",
+    "version": "1.0.0",
+    "dependencies": {
+        "react": "^17.0.0",
+        "react-dom": "^17.0.0",
+        "react-router-dom": "^5.2.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.25.8",
+        "@babel/preset-env": "^7.25.8",
+        "@babel/preset-react": "^7.25.7",
+        "babel-loader": "^8.4.1",
+        "css-loader": "^7.1.2",
+        "style-loader": "^4.0.0",
+        "webpack": "^5.95.0",
+        "webpack-cli": "^4.10.0"
+    },
+    "scripts": {
+        "build": "webpack --mode production",
+        "dev": "webpack --mode development --watch"
+    }
+}
