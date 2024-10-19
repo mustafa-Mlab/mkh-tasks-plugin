@@ -25,10 +25,16 @@ function mkh_task_plugin_shortcode() {
         true
     );
 
+    if( is_user_logged_in() ) {
+        $role = wp_get_current_user()->roles[0];
+    }else{
+        $role = 'guest';
+    }
+    
     wp_localize_script( 'mkh-react-app', 'taskPluginData', array(
         'rest_url' => esc_url_raw( rest_url() ),
         'nonce' => wp_create_nonce( 'wp_rest' ),
-        'userRole' => wp_get_current_user()->roles[0],
+        'userRole' => $role,
     ));
 
     return '<div id="mkh-react-app"></div>';
